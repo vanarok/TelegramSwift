@@ -244,6 +244,7 @@ static const int32_t FPS = 600;
                                                  kCGImageAlphaNoneSkipFirst);
     NSAssert(context, @"Could not create a context");
     
+    CGContextClearRect(context, CGRectMake(0, 0, width, height));
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), frame);
     
     CVPixelBufferUnlockBaseAddress(pxBuffer, 0);
